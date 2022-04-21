@@ -4,7 +4,7 @@
 # Print out the last student's name.
 students = ['Shawna', 'Dahlia', 'Maya', 'Shea']
 print(students[2])
-print(students[3])
+print(students[-1])
 
 # Exercise 2
 # Create a tuple named foods containing the same number of foods (strings) as there are names in the students list.
@@ -61,10 +61,16 @@ for cohort in cohort:
 #     awesome_students.append(students)
 #     print()
 
-awesome_students = ["Tina is awesome!", "Fred is awesome!", "Wilma is awesome!"]
-awesome_students = [student for student in awesome_students if "a" in student]
-print(awesome_students)
+# awesome_students = ["Tina is awesome!", "Fred is awesome!", "Wilma is awesome!"]
+# awesome_students = [student for student in awesome_students if "a" in student]
+# print(awesome_students)
 
+
+# awesome_students = [student for student in students if student]
+# print(f'{student} is awesome!')
+
+awesome_students = [f"{student} is awesome" for student in students]
+print(awesome_students)
 # Exercise 8
 # Using the tuple foods and list comprehension within a for loop, print each food string that contains the letter a.
 for food in [food for food in foods if 'a' in food]:
